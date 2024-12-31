@@ -1,60 +1,57 @@
-# PDF to Audiobook Converter - Streamlit App
+# PDF to Audiobook Converter
 
-A Streamlit-based application that converts PDF files to audiobooks using pyttsx3 for text-to-speech conversion.
+A Streamlit application that converts PDF documents to audiobooks using text-to-speech technology.
 
 ## Features
 
-- Convert PDF files to audio in real-time
-- Interactive web interface with Streamlit
-- Adjustable reading speed and volume
-- Progress tracking and status updates
-- Efficient memory management
+- Upload and process PDF documents
+- Text-to-speech conversion with adjustable settings
+- Support for scanned PDFs through OCR (requires Tesseract)
+- Progress tracking for long operations
+- Clean resource management
 - Error handling and recovery
-- Automatic cache cleanup
 
-## Prerequisites
+## Requirements
 
-- Python 3.8 or higher
-- Streamlit
-- pyttsx3
-- pdfplumber
+- Python 3.8+
+- Tesseract OCR (optional, for scanned PDFs)
 
 ## Installation
 
-1. Clone this repository
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+1. Clone the repository
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. (Optional) Install Tesseract OCR for scanned PDF support:
+   - Windows: Download from https://github.com/UB-Mannheim/tesseract/wiki
+   - Linux: `sudo apt-get install tesseract-ocr`
 
 ## Configuration
 
-The application uses an internal configuration class for settings. Key settings include:
-- Maximum file size: 50MB
-- Cache timeout: 1 hour
-- Text chunk size: 100-1000 characters
-- Maximum worker threads: 3
-
-## Running the Application
-
-To run the application locally:
-
-```bash
-streamlit run app.py
-```
+The application can be configured through environment variables:
+- `TESSERACT_PATH`: Path to Tesseract executable (default: 'C:\Program Files\Tesseract-OCR\tesseract.exe')
+- `CACHE_DIR`: Directory for temporary files (default: 'cache')
 
 ## Usage
 
-1. Launch the application using the command above
-2. Upload a PDF file using the file uploader
-3. Adjust settings in the sidebar (speed, volume, chunk size)
-4. Use the play/pause controls to manage audio playback
-5. Monitor progress in the status section
+1. Start the application:
+   ```bash
+   streamlit run app.py
+   ```
+2. Upload a PDF file
+3. Adjust voice settings (speed, volume, voice selection)
+4. Use playback controls to navigate and listen to the content
 
-## Sample PDFs
+## Contributing
 
-Place your PDF files in the `pdf_books` directory. Note that this directory is gitignored by default to avoid accidentally committing copyrighted material. Only add PDF files that you have the rights to use and distribute.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Last Update
+## License
 
-Last updated: 2024-12-09 21:42:17 CST
+This project is licensed under the MIT License - see the LICENSE file for details.
