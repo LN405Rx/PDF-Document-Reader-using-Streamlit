@@ -4,13 +4,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-A Streamlit application that converts PDF documents to audiobooks using text-to-speech technology.
+A Streamlit application that converts PDF documents to audiobooks using text-to-speech technology and runs locally on your computer.
 
 ## Features
 
 - Upload and process PDF documents
 - Text-to-speech conversion with adjustable settings
-- Multiple voice options for text-to-speech
+- Two voice options for text-to-speech
 - Support for scanned PDFs through OCR (requires Tesseract)
 - Progress tracking for long operations
 - Clean resource management
@@ -65,11 +65,11 @@ The application can be configured through environment variables:
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+Contributions are welcome! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
 
 ## Security
 
-For details about our security policy and how to report security vulnerabilities, please see our [Security Policy](SECURITY.md).
+For details about the security policy and how to report security vulnerabilities, please see our [Security Policy](SECURITY.md).
 
 ## License
 
@@ -77,6 +77,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Thanks to all contributors who have helped shape this project
 - Built with [Streamlit](https://streamlit.io/)
 - Uses [pyttsx3](https://github.com/nateshmbhat/pyttsx3) for text-to-speech
